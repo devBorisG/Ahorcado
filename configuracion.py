@@ -22,4 +22,8 @@ class Configuracion:
         self.__bonus = bonus
         
     def setIntentos(self,intentos):
-        self.__bonus = intentos
+        self.__intentos = intentos
+        
+nivelBajo = Configuracion(1,1,4)
+nivelMedio = Configuracion(2,2,6)
+nivelAlto = Configuracion(2,3,8)

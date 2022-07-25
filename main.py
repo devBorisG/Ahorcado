@@ -1,4 +1,4 @@
-from menus import menuConfig, menuJuego
+from opciones import config, juego
 
 def main():
     cond = True
@@ -15,9 +15,9 @@ def main():
                 print("Ingrese el número que acompaña a la opción")
         cond = True
         if(opc == 1):
-            menuConfig()
+            config()
         elif(opc == 2):
-            menuJuego()
+            juego()
         elif(opc == 3):
             print("Adiós")
             opc = 0
