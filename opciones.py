@@ -1,6 +1,7 @@
 import configuracion
 import palabras
 import funciones
+import os
 
 #FEDERICO
 def config():
@@ -32,6 +33,7 @@ def juego():
         
         if (entrada == palabraAleatoria.getPalabra()) and bonus == True:
             print("acertaste a la primera!!")
+            os.system("pause")
             intentos=0
         else:
             puntosBonus = 0
@@ -43,13 +45,15 @@ def juego():
             
         if("".join(map(str,palabraRespuesta)) == palabraAleatoria.getPalabra()):
             print("Adivinaste la palabra!!!",palabraAleatoria.getPalabra())
-            #posible solucion a DESACTIVAR PALABRA SI SE ADIVINA
-            #palabraAleatoria.setActivo(False)
+            palabraAleatoria.setActivo(False)
+            os.system("pause")
             intentos = 0
                 
         #SOLUCION DE ERROR DE INTENTOS (MERA BOBADA)
         if(cond !=False):
             intentos = intentos - 1
+        
+        funciones.borrarPantalla()
 
 #FUNCIONES CONFIGURACION:
 #   1.CAMBIAR PUNTOS
