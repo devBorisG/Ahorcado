@@ -1,11 +1,12 @@
 import random
 import configuracion
+import os
 
 def verificarNivel():
     cond = True
     while(cond):
             try:
-                nivel = int(input("Que nivel desea\n\t1.Bajo\n\t2. Medio\n\t3. Alto"))
+                nivel = int(input("Que nivel desea\n\t1. Bajo\n\t2. Medio\n\t3. Alto"))
             except ValueError:
                 print("Ingrese el número que acompaña a la letra por favor")
             else:
@@ -39,3 +40,9 @@ def obtenerConfNivel(nivel):
         return configuracion.nivelMedio
     else:
         return configuracion.nivelAlto
+    
+def borrarPantalla():
+    if os.name == "posix":
+        os.system("clear")
+    elif os.name == "ce" or os.name == "nt" or os.name == "dos":
+        os.system("cls")
