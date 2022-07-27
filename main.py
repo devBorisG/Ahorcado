@@ -1,4 +1,5 @@
 from opciones import config, juego
+from funciones import borrarPantalla
 
 def main():
     cond = True
@@ -15,8 +16,10 @@ def main():
                 print("Ingrese el número que acompaña a la opción")
         cond = True
         if(opc == 1):
+            borrarPantalla()
             config()
         elif(opc == 2):
+            borrarPantalla()
             juego()
         elif(opc == 3):
             print("Adiós")
