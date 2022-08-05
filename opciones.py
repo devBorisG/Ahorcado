@@ -3,7 +3,6 @@ import palabras
 import funciones
 import os
 
-#FEDERICO
 def config():
     opc = 0
     op = 0
@@ -205,17 +204,3 @@ def juego():
             intentos = intentos - 1
         
         funciones.borrarPantalla()
-
-#FUNCIONES CONFIGURACION:
-#   1.CAMBIAR PUNTOS
-#   1.CAMBIAR BONUS
-#   1.CAMBIAR INTENTOS
-#   1.AGREGAR, QUITAR Y EDITAR PALABRAS
-
-
-#FUNCIONES JUEGO:
-#   2.ESCOGER UNA PALABRA RANDOM DEPENDE DE LA DIFICULTAD
-#   3.PINTAR PALABRA Y SUS PISTAS
-#   4.SI ACERTO LA PALABRA DESACTIVARLA
-#   5.SELECCIONAR LA COMPLEJIDAD
-#   6.RESTAR INTENTOS
